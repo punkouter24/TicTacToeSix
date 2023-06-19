@@ -9,6 +9,7 @@ public partial class MainPage : ContentPage
     private bool isPlayerXTurn = true;
     private int turnCount = 0;
 
+    [Obsolete]
     public MainPage()
     {
         Grid grid = new Grid();
