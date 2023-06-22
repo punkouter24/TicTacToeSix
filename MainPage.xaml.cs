@@ -29,7 +29,7 @@ public partial class MainPage : ContentPage
                     FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Button)),
                     Padding = 0
                 };
-                button.Clicked += Button_Click;
+                button.Clicked += async (sender, args) => { await Button_Click(sender, args); };
                 buttons[row, column] = button;
                 Grid.SetRow(button, row);
                 Grid.SetColumn(button, column);
@@ -77,7 +77,7 @@ public partial class MainPage : ContentPage
         newGameButton.IsVisible = false;
     }
 
-    private void Button_Click(object sender, EventArgs e)
+    private async Task Button_Click(object sender, EventArgs e)
     {
         Button button = sender as Button;
         int row = Grid.GetRow(button);
@@ -89,19 +89,9 @@ public partial class MainPage : ContentPage
             turnCount++;
             if (CheckForWin(row, column))
             {
-                statusLabel.Text = $"{button.Text} Wins!";
                 DisableButtons();
-                ShowNewGameButton();
-            }
-            else if (turnCount == 36)
-            {
-                statusLabel.Text = "It's a draw!";
-                ShowNewGameButton();
-            }
-            else
-            {
-                isPlayerXTurn = !isPlayerXTurn;
-                statusLabel.Text = $"Player {(isPlayerXTurn ? "X" : "O")}'s Turn";
+                await Navigation.PushModalAsync(new WinnerDialog(button.Text));
+                NewGame();
             }
         }
     }
