@@ -87,11 +87,22 @@ public partial class MainPage : ContentPage
         {
             button.Text = isPlayerXTurn ? "X" : "O";
             turnCount++;
+
             if (CheckForWin(row, column))
             {
                 DisableButtons();
                 await Navigation.PushModalAsync(new WinnerDialog(button.Text));
                 NewGame();
+            }
+            else if (turnCount == 36)
+            {
+                statusLabel.Text = "It's a draw!";
+                ShowNewGameButton();
+            }
+            else
+            {
+                isPlayerXTurn = !isPlayerXTurn;
+                statusLabel.Text = $"Player {(isPlayerXTurn ? "X" : "O")}'s Turn";
             }
         }
     }
