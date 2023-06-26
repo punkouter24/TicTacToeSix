@@ -9,7 +9,6 @@ namespace TicTacToeSix
 {
     public class WinnerDialog : ContentPage
     {
-        [Obsolete]
         public WinnerDialog(string winner)
         {
             BackgroundColor = Color.FromRgba(0, 0, 0, 0.7);

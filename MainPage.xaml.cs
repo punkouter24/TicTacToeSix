@@ -36,12 +36,21 @@ public partial class MainPage : ContentPage
                 grid.Children.Add(button);
             }
         }
-        statusLabel = new Label { Text = "Player X's Turn", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center };
+
+        statusLabel = new Label
+        {
+            Text = "Player X's Turn",
+            FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
+            TextColor = Colors.Green,
+            BackgroundColor = Colors.Aqua,
+            HorizontalOptions = LayoutOptions.Center,
+            VerticalOptions = LayoutOptions.Center
+        };
+
         Grid.SetRow(statusLabel, 6);
         Grid.SetColumn(statusLabel, 0);
         Grid.SetColumnSpan(statusLabel, 6);
         grid.Children.Add(statusLabel);
-
 
         newGameButton = new Button { Text = "New Game", HorizontalOptions = LayoutOptions.Center, VerticalOptions = LayoutOptions.Center, IsVisible = false };
         newGameButton.Clicked += NewGame_Click;
@@ -52,6 +61,7 @@ public partial class MainPage : ContentPage
 
         Content = grid;
     }
+
 
     private void ShowNewGameButton()
     {
@@ -71,6 +81,7 @@ public partial class MainPage : ContentPage
             button.Text = string.Empty;
             button.IsEnabled = true;
         }
+
         isPlayerXTurn = true;
         turnCount = 0;
         statusLabel.Text = "Player X's Turn";
@@ -92,6 +103,7 @@ public partial class MainPage : ContentPage
             {
                 DisableButtons();
                 await Navigation.PushModalAsync(new WinnerDialog(button.Text));
+              //  await Navigation.PushAsync(new WinnerDialog(button.Text));
                 NewGame();
             }
             else if (turnCount == 36)
