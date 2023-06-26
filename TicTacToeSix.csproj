@@ -31,9 +31,9 @@
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(TargetFramework)'=='net7.0-ios'">
-	  <CodesignKey>Apple Development: Created via API (UY7MUK8457)</CodesignKey>
-	  <CodesignProvision></CodesignProvision>
-	  <ProvisioningType>manual</ProvisioningType>
+	  <CodesignKey>Apple Distribution: matthew herb (643MNXX7BD)</CodesignKey>
+	  <CodesignProvision>TicTacToeSix</CodesignProvision>
+	  <ProvisioningType>automatic</ProvisioningType>
 	</PropertyGroup>
 
 	<ItemGroup>
