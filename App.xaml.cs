@@ -9,3 +9,6 @@ public partial class App : Application
         MainPage = new NavigationPage(new TitlePage());
     }
 }
+
+//punkouter23@outlook.com (?) 
+//iurw-ovxq-izgx-enhi
