@@ -10,13 +10,23 @@ namespace TicTacToeSix
     {
         public TitlePage()
         {
-            Title = "TIC TAC TOE 6";
+           // Title = "TIC TAC TOE 6";
             BackgroundColor = Colors.White;
 
             Label titleLabel = new Label
             {
                 Text = "TIC TAC TOE 6",
                 FontSize = 32,
+                TextColor = Colors.Black,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.CenterAndExpand
+            };
+
+            //add a label below title that contains instruction in a smaller font
+            Label instructionLabel = new Label
+            {
+                Text = "Play on a 6x6 board. Get 4 in a row to win!",
+                FontSize = 16,
                 TextColor = Colors.Black,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.CenterAndExpand
@@ -36,7 +46,7 @@ namespace TicTacToeSix
 
             Content = new StackLayout
             {
-                Children = { titleLabel, beginButton }
+                Children = { titleLabel, instructionLabel, beginButton }
             };
         }
 

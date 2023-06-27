@@ -16,7 +16,7 @@ namespace TicTacToeSix
             Label winnerLabel = new Label
             {
                 Text = $"{winner} Wins!",
-                FontSize = 24,
+                FontSize = 100,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center,
                 TextColor = Colors.White
@@ -27,7 +27,7 @@ namespace TicTacToeSix
                 Text = "New Game",
                 FontSize = 24,
                 HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.CenterAndExpand,
+                VerticalOptions = LayoutOptions.Center,
                 BackgroundColor = Colors.Green,
                 TextColor = Colors.White
             };
