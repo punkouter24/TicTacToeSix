@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+	<line x1="100" y1="0" x2="100" y2="300" stroke="black"/>
+	<line x1="200" y1="0" x2="200" y2="300" stroke="black"/>
+	<line x1="0" y1="100" x2="300" y2="100" stroke="black"/>
+	<line x1="0" y1="200" x2="300" y2="200" stroke="black"/>
+
+	<!-- First move (Cross in the top left cell) -->
+	<line x1="25" y1="25" x2="75" y2="75" stroke="black"/>
+	<line x1="25" y1="75" x2="75" y2="25" stroke="black"/>
+
+	<!-- Second move (Circle in the middle cell) -->
+	<circle cx="150" cy="150" r="35" stroke="black" fill="transparent"/>
+
+	<!-- Third move (Cross in the top right cell) -->
+	<line x1="225" y1="25" x2="275" y2="75" stroke="black"/>
+	<line x1="275" y1="25" x2="225" y2="75" stroke="black"/>
+
+	<!-- Fourth move (Circle in the bottom left cell) -->
+	<circle cx="50" cy="250" r="35" stroke="black" fill="transparent"/>
+
+	<!-- Fifth move (Circle in the bottom right cell) -->
+	<circle cx="250" cy="250" r="35" stroke="black" fill="transparent"/>
+
+	<!-- Sixth move (Cross in the bottom middle cell) -->
+	<line x1="125" y1="225" x2="175" y2="275" stroke="black"/>
+	<line x1="125" y1="275" x2="175" y2="225" stroke="black"/>
+</svg>
