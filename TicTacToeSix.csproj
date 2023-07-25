@@ -41,7 +41,7 @@
 		<!-- App Icon -->
 		<!--<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />-->
 		<!--<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\tictactoesix.svg" Color="#512BD4" />-->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\icon1.jpg" />
+		<MauiIcon Include="Resources\AppIcon\tictactoesix.svg" ForegroundFile="Resources\AppIcon\icon1.jpg" />
 
 
 		<!-- Splash Screen -->
